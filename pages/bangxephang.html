@@ -1,0 +1,85 @@
+<div class="main-grids" style="min-height: 450px;overflow: hidden;" ng-controller="bangxephangController">
+    <div class="col-sm-12">
+    <div class="song-info">
+            <h3 style="font-family: Arial, sans-serif; font-size: 25px; line-height: 1.2; max-height: none; color: #1E1E1E; letter-spacing: -1px;">Bảng xếp hạng và kết quả các giải đấu hàng đầu thế giới</h3>  
+    </div>
+    <div class="entry-content"> 
+        <iframe class="tap-sport-tools" frameborder="0" width="100%" height="580" id="tap-sport-tools-68271" marginheight="0" marginwidth="0" scrolling="no" src="http://tinthethao365.com.vn//livescore/fifawd.php?full=&lk=eng" style="vertical-align: bottom;border:0px;" width="100%"></iframe>
+    </div>
+      
+       <!--  <div class="entry-content" itemprop="text">
+            <table id="da-lt-table-2" class="da-lt-table tablesorter" style="border-collapse: collapse !important;border-spacing: 0 !important;table-layout: auto !important;padding: 0 !important;border: 0 !important;vertical-align: middle !important;width: 100% !important;margin: 20px 0 20px 0 !important;" data-order-by-1="8" data-order-ad-1="0" data-order-by-2="2" data-order-ad-2="0" data-order-by-3="0" data-order-ad-3="0" data-order-by-4="0" data-order-ad-4="0">
+                <thead>
+                    <tr>
+                        <th  class="da-lt-position table-rank" >#</th>
+                        <th  class="header headerSortUp table-rank">Đội bóng</th>
+                        <th class="da-lt-visibility-1 header table-rank">Trận</th>
+                        <th class="da-lt-visibility-2 header headerSortUp table-rank">Thắng</th>
+                        <th class="da-lt-visibility-2 header table-rank">Hoà</th>
+                        <th  class="da-lt-visibility-2 header table-rank">Thua</th>
+                        <th  class="da-lt-visibility-3 header table-rank">Bàn thắng</th>
+                        <th class="da-lt-visibility-3 header table-rank">Bàn thua</th>
+                        <th class="da-lt-visibility-2 header table-rank">+/-</th>
+                        <th class="da-lt-visibility-1 header headerSortUp table-rank">Điểm</th>
+                    </tr>
+                </thead>
+                <tbody id="da-lt-tbody-2">
+                    <tr id="da-lt-tr-2" style="margin: 0 !important;padding: 0 !important;border: 0 !important;vertical-align: middle !important;border-collapse: collapse !important;border-spacing: 0 !important;" ng-repeat="bxh in bangxephang">
+                        <td class="table-ranhk-tr">{{bxh.id}}</td>
+                        <td style="margin: 0 !important;vertical-align: middle !important;border-collapse: collapse !important;border-spacing: 0 !important;background: inherit !important;letter-spacing: 0 !important;text-shadow: none !important;text-align: left !important;border-width: 0 1px 1px 1px !important;border-color: #E1E1E1 !important;border-style: solid !important;padding: 3px 10px !important;font-size: 11px !important;line-height: 17px !important;font-family: 'Open Sans',Helvetica,Arial,sans-serif !important;font-weight: 400 !important;">
+                        <img style="border-radius: 0 !important;-webkit-border-radius: 0 !important;box-shadow: none !important;-webkit-box-shadow: none !important;border: 0 !important;padding: 0 !important;display: inline-block !important;vertical-align: middle !important;margin: 0 5px 0 0 !important;width: 17px !important;height: 17px !important;float: left !important;" src="images/caulacbo/ngoaihanganh/{{bxh.hinhanh}}">
+                        <a style="font-weight: 400 !important;border-width: 0 !important;display: inline !important;color: #C3512F !important;font-size: 14px !important;line-height: 17px !important;font-family: 'Open Sans',Helvetica,Arial,sans-serif !important;" target="_blank" href="#/">{{bxh.tendoi}}</a></td>
+                        <td class="table-ranhk-tr">{{bxh.tran}}</td>
+                        <td class="table-ranhk-tr">{{bxh.thang}}</td>
+                        <td class="table-ranhk-tr">{{bxh.hoa}}</td>
+                        <td class="table-ranhk-tr">{{bxh.thua}}</td>
+                        <td class="table-ranhk-tr">{{bxh.banthang}}</td>
+                        <td class="table-ranhk-tr">{{bxh.banthua}}</td>
+                        <td class="table-ranhk-tr">{{bxh.heso}}</td>
+                        <td class="table-ranhk-tr" style="font-weight: bold !important;">{{bxh.diem}}</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+    
+    
+</div>
+<style type="text/css">
+   .table-rank{
+        margin: 0 !important;
+        vertical-align: middle !important;
+        border-collapse: collapse !important;
+        border-spacing: 0 !important;
+        float: none !important;
+        width: auto !important;
+        position: static !important;
+        letter-spacing: 0 !important;
+        text-shadow: none !important;
+        height: 17px !important;
+        color: #FFFFFF !important;
+        text-transform: initial !important;
+        background: #272C2E !important;
+        text-align: center !important;
+        border-width: 1px !important;
+        border-color: #EAEAEA !important;
+        border-style: solid !important;
+        padding: 7px 10px !important;
+        font-size: 15px !important;
+        line-height: 17px !important;
+        font-family: 'Open Sans',Helvetica,Arial,sans-serif !important;
+        font-weight: 400 !important;
+    }
+    .table-ranhk-tr
+    {
+       margin: 0 !important;vertical-align: middle !important;border-collapse: collapse !important;border-spacing: 0 !important;background: inherit !important;letter-spacing: 0 !important;text-shadow: none !important;text-align: center !important;border-width: 0 1px 1px 1px !important;border-color: #E1E1E1 !important;border-style: solid !important;padding: 3px 10px !important;font-size: 14px !important;line-height: 17px !important;font-family: 'Open Sans',Helvetica,Arial,sans-serif !important;font-weight: 400 !important;
+    }
+    #da-lt-table-2 tr:hover{
+        background-color: rgba(33, 222, 239, 0.31);
+        cursor: pointer;
+
+    }
+</style>
+
+
