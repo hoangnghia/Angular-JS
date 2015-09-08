@@ -1,0 +1,277 @@
+
+<div class="show-top-grids" ng-controller="chitiettintucController">
+				<div class="col-sm-8 single-left" ng-repeat="detailnew in detailnews">
+					<div class="song">
+						<div class="song-info" >
+							<h3 style="font-family: Arial, sans-serif; font-size: 25px; line-height: 1.2; max-height: none; margin: 10px 0 0; color: #1E1E1E; letter-spacing: -1px;">{{detailnew.tieude}}</h3>	
+					</div>
+					<!-- 	
+							<iframe src="https://www.youtube.com/embed/KHNvC5D6CEs" allowfullscreen></iframe>
+						</div>
+						 -->
+						
+					<div class="video-grid">
+					<img ng-src="images/news/{{detailnew.hinhanh}}" width="100%;" alt="">
+						<!-- <iframe oncontextmenu="return false" scrolling="no" title="xem video" src="https://www.youtube.com/embed/C9z0iPED8Fc?VQ=HD720&amp;autoplay=1&amp;controls=1&amp;html5=1&amp;autohide=1&amp;wmode=transparent&amp;enablejsapi=2&amp;disablekb=0&amp;wmode=opaque&amp;autoplay=0&amp;rel=0&amp;iv_load_policy=3&amp;nologo=1&amp;showinfo=0&amp;modestbranding=1&amp;version=3&amp;menu=0&amp;ps=docs&amp;nologo=1&amp;disablekb=1&amp;modestbranding=1&amp;iv_load_policy=0&amp;cc_load_policy=1" oncontextmenu="return false; width="100%" height="400" allownetworking="internal" modestbranding="1"  frameborder="0" allowfullscreen="""></iframe> -->					
+					</div>    
+
+					</div>
+
+
+					<div class="song-grid-right">
+						<div class="share">
+							<h5>Chia sẻ</h5>
+							<ul>
+								<li><a href="#" class="icon fb-icon">Facebook</a></li>
+								<!-- <li><a href="#" class="icon dribbble-icon">Dribbble</a></li> -->
+								<li><a href="#" class="icon twitter-icon">Twitter</a></li>
+								<li><a href="#" class="icon pinterest-icon">Pinterest</a></li>
+								<!-- <li><a href="#" class="icon whatsapp-icon">Whatsapp</a></li> -->
+								<li><a href="#" class="icon like">Like</a></li>
+								<li><a href="#binhluan" class="icon comment-icon">Bình luận</a></li>
+								<li class="view">200 views</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="published">
+						<script src="jquery.min.js"></script>
+							<script>
+								$(document).ready(function () {
+									size_li = $("#myList li").size();
+									x=1;
+									$('#myList li:lt('+x+')').show();
+									$('#loadMore').click(function () {
+										x= (x+1 <= size_li) ? x+1 : size_li;
+										$('#myList li:lt('+x+')').show();
+									});
+									$('#showLess').click(function () {
+										x=(x-1<0) ? 1 : x-1;
+										$('#myList li').not(':lt('+x+')').hide();
+									});
+								});
+							</script>
+							<!-- <div class="load_more">	
+								<ul id="myList">
+									<li>
+										<h4>Published on 15 June 2015</h4>
+										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+									</li>
+									<li>
+										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+										<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+										<div class="load-grids">
+											<div class="load-grid">
+												<p>Category</p>
+											</div>
+											<div class="load-grid">
+												<a href="movies.html">Entertainment</a>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+									</li>
+								</ul>
+							</div> -->
+					</div>
+					<div class="all-comments" style="font-family: Arial, sans-serif; font-size: 14px; line-height: 22px; text-rendering: geometricPrecision; color: #333;overflow: hidden;">
+						<p class="noidung" ng-bind-html="detailnew.noidung"></p>
+					</div>
+					<div class="all-comments" id="binhluan">
+						<div class="all-comments-info">
+							<a href="#">Tất cả bình luận (8,657)</a>
+							<div class="box">
+								<form>
+									<input type="text" placeholder="Họ tên" required=" ">			           					   
+									<input type="text" placeholder="Email" required=" ">									
+									<textarea placeholder="Nội dung" required=" "></textarea>
+									<input type="submit" value="Bình luận">
+									<div class="clearfix"> </div>
+								</form>
+							</div>
+							<div class="all-comments-buttons">
+								<ul>
+									<li><a href="#" class="top">Hay nhất</a></li>
+									<li><a href="#" class="top newest">Mới nhất</a></li>
+									<li><a href="#" class="top my-comment">Của bạn</a></li>
+								</ul>
+							</div>
+						</div>
+						
+
+						<div class="media-grids">
+						<div class="media">
+								<h5>HOÀI THU </h5>
+								<div class="media-left">
+									<a href="#">
+										
+									</a>
+								</div>
+								<div class="media-body">
+									<p>Thật sự công tác tư duy chiến thuật với thời điểm như hiện nay thì lối đá thực dụng đang lên ngôi nhìn quốc têa cấp clb thì có ches còn nhing vào đội tuyển thì ai theo dõi ero cũng đã thaya hi lạp lên ngôi vô địch thế nào và tại việt nam ngoài miura thì ngay cả hlv của các đội thiếu nhi nếu đá không bằng thì sử dụng chiến thuật chặt chém phạm lỗi rồi mới đổi cấu thủ qun trọng vào, thử hỏi mơi 10t đã được dạy như vậy thì u19 trong bao time qua đã được dạy thêm những j?</p>
+									<span>22:23 NGÀY 29/08/2015</span>
+								</div>
+							</div>	
+							<div class="media">
+								<h5>Hoàng Nghĩa</h5>
+								<div class="media-left">
+									<a href="#">
+										
+									</a>
+								</div>
+								<div class="media-body">
+									<p>Bài viết hay, chuẩn xác, triết lí bóng đá mới, đá mà không cần dùng não. Khi nào VFF còn ham hàng miễn phí, còn giữ Miura thì khi đó quá nửa người hâm mộ chả buồn quan tâm khi nào tuyển đá. Xem trận đầu u19 đá, Đông ti-mo chớ không phải Thái, lối chơi nghèo nàn, bạc nhược, cũng chả thèm theo dõi tiếp giải đấu. Chưa bao giờ NHM trách tuyển vì không đạt danh hiệu cao, mà họ sẽ chưởi thẳng mặt vì đá bóng mà yếu hèn như vậy. Dẫu biết có comment bao nhiêu thì cũng chả thay đổi được gì, chỉ tiếc cho một nền bóng đá, rồi sẽ không lâu đâu, ngay cả gặp Cambodia Việt Nam cũng sẽ đá đổ bê tông thôi.</p>
+									<!-- <span>View all posts by :<a href="#"> Admin </a></span> -->
+									<span>22:23 NGÀY 29/08/2015</span>
+								</div>
+							</div>
+							
+
+													
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 single-right">
+					<h3>Tin tức khác</h3>
+					<div class="single-grid-right">
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r1.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r2.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views </p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r3.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r4.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r5.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r6.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author">By <a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r1.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r2.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r3.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r4.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r5.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="single-right-grids">
+							<div class="col-md-4 single-right-grid-left">
+								<a href="single.html"><img src="images/r6.jpg" alt="" /></a>
+							</div>
+							<div class="col-md-8 single-right-grid-right">
+								<a href="single.html" class="title"> Nullam interdum metus</a>
+								<p class="author"><a href="#" class="author">John Maniya</a></p>
+								<p class="views">2,114,200 views</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		<style type="text/css">
+			.noidung img
+			{
+				width: 100%;
+			}
+		</style>
